@@ -3056,6 +3056,129 @@
         transition-duration: 0.01ms !important;
       }
     }
+
+    /* ── BLOGS ───────────────────────────── */
+    .blogs {
+      padding: 80px 0;
+    }
+
+    .blogs__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .blogs__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .blog-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-card__image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .blog-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover .blog-card__image img {
+      transform: scale(1.05);
+    }
+
+    .blog-card__category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: var(--gradient-btn);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .blog-card__content {
+      padding: 25px;
+    }
+
+    .blog-card__title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .blog-card__excerpt {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .blog-card__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .blog-card__link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .blog-card__link:hover {
+      color: var(--accent-hover);
+    }
+
+    .blogs__cta {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .blogs__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .blog-card__content {
+        padding: 20px;
+      }
+
+      .blog-card__title {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 
@@ -3091,6 +3214,7 @@
         <li><a href="#planos">Plans</a></li>
         <li><a href="#dispositivos">Devices</a></li>
         <li><a href="#perguntas">FAQ</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
       </ul>
 
       <!-- CTA -->
@@ -4182,6 +4306,75 @@
 
   <div class="section-divider"></div>
 
+  <!-- ========== BLOGS ========== -->
+  <section class="blogs" id="blogs">
+    <div class="blogs__inner">
+      <div class="section-header">
+        <div class="section-tag">📝 Blogs</div>
+        <h2 class="section-title">Latest <span>Articles</span></h2>
+        <p class="section-sub">Stay updated with the latest IPTV news, tips, and guides.</p>
+      </div>
+
+      <!-- Grid -->
+      <div class="blogs__grid">
+        <article class="blog-card">
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="IPTV Setup Guide" />
+            <div class="blog-card__category">Guide</div>
+          </div>
+          <div class="blog-card__content">
+            <h3 class="blog-card__title">Complete IPTV Setup Guide for Beginners</h3>
+            <p class="blog-card__excerpt">Learn how to set up IPTV on all your devices in under 10 minutes. Step-by-step instructions for Android, iOS, Smart TV, and more.</p>
+            <div class="blog-card__meta">
+              <span class="blog-card__date">Dec 15, 2024</span>
+              <span class="blog-card__read-time">5 min read</span>
+            </div>
+            <a href="blogs.html#setup-guide" class="blog-card__link">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=250&fit=crop" alt="Sports Channels" />
+            <div class="blog-card__category">Sports</div>
+          </div>
+          <div class="blog-card__content">
+            <h3 class="blog-card__title">Top 10 Must-Watch Sports Channels in 2025</h3>
+            <p class="blog-card__excerpt">From Premier League to NBA, discover the best sports channels available on IPTV Brazil. Never miss your favorite games again.</p>
+            <div class="blog-card__meta">
+              <span class="blog-card__date">Dec 10, 2024</span>
+              <span class="blog-card__read-time">4 min read</span>
+            </div>
+            <a href="blogs.html#sports-channels" class="blog-card__link">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1489599735734-79b4d4c4b5db?w=400&h=250&fit=crop" alt="4K Streaming" />
+            <div class="blog-card__category">Technology</div>
+          </div>
+          <div class="blog-card__content">
+            <h3 class="blog-card__title">Why 4K Streaming is the Future of Entertainment</h3>
+            <p class="blog-card__excerpt">Explore the benefits of 4K streaming and how IPTV Brazil delivers crystal-clear picture quality for movies, series, and live TV.</p>
+            <div class="blog-card__meta">
+              <span class="blog-card__date">Dec 5, 2024</span>
+              <span class="blog-card__read-time">6 min read</span>
+            </div>
+            <a href="blogs.html#4k-streaming" class="blog-card__link">Read More →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA -->
+      <div class="blogs__cta">
+        <a href="blogs.html" class="btn btn--primary">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- ========== FINAL CTA ========== -->
   <section class="final-cta">
     <div class="final-cta__inner">
@@ -4428,7 +4621,7 @@
       }
 
       setTimeout(showNotif, 3000);
-      setInterval(showNotif, 6000);
+      setInterval(showNotif, 60000);
     })();
 
     // ── STATS COUNTER ─────────────────────────────

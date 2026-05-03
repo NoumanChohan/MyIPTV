@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Language" content="en" />
+
+  <!-- SEO Meta Tags -->
+  <title>IPTV Brazil Blogs | Latest IPTV News, Tips & Guides</title>
+  <meta name="description" content="Read the latest blogs about IPTV Brazil - setup guides, channel reviews, streaming tips, and entertainment news." />
+  <meta name="keywords" content="iptv blogs, iptv guides, streaming tips, iptv news, brazil iptv blogs" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="IPTV Brazil" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IPTV Brazil Blogs | Latest IPTV News & Guides" />
+  <meta property="og:description" content="Read the latest blogs about IPTV Brazil - setup guides, channel reviews, streaming tips, and entertainment news." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="IPTV Brazil" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IPTV Brazil Blogs | Latest IPTV News & Guides" />
+  <meta name="twitter:description" content="Read the latest blogs about IPTV Brazil." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="brazil.svg" type="image/svg+xml" />
+
+  <style>
+    /* ============================================
+       IPTV BRAZIL - BLOGS PAGE STYLES
+       ============================================ */
+
+    :root {
+      --primary: #e50914;
+      --primary-hover: #f40612;
+      --secondary: #ff3b6b;
+      --accent: #00ff88;
+      --accent-hover: #00e67a;
+      --dark: #0b0b0f;
+      --darker: #0a0a0f;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text-primary: #ffffff;
+      --text-secondary: #cccccc;
+      --text-muted: #888888;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --gradient-btn: linear-gradient(135deg, #e50914, #ff3b6b);
+      --font-head: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* ── CONTAINER ───────────────────────────── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── HEADER ───────────────────────────── */
+    .header {
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 15px 0;
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .header__logo-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header__logo-text span:first-child {
+      color: var(--accent);
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .header__links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .header__links a {
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .header__links a:hover,
+    .header__links a.active {
+      color: var(--accent);
+    }
+
+    .header__cta {
+      display: flex;
+      gap: 15px;
+    }
+
+    /* ── HERO ───────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #0b0b0f 0%, #1a1a2e 100%);
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+
+    .hero__title {
+      font-size: 48px;
+      font-weight: 800;
+      font-family: var(--font-head);
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffffff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero__subtitle {
+      font-size: 20px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ── BLOG GRID ───────────────────────────── */
+    .blog-grid {
+      padding: 80px 0;
+    }
+
+    .blog-grid__title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      font-family: var(--font-head);
+      margin-bottom: 20px;
+    }
+
+    .blog-grid__subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+
+    .blog-posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .blog-post {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-post__image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .blog-post__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-post:hover .blog-post__image img {
+      transform: scale(1.05);
+    }
+
+    .blog-post__category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: var(--gradient-btn);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .blog-post__content {
+      padding: 25px;
+    }
+
+    .blog-post__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .blog-post__excerpt {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .blog-post__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .blog-post__link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .blog-post__link:hover {
+      color: var(--accent-hover);
+    }
+
+    /* ── BLOG DETAIL ───────────────────────────── */
+    .blog-detail {
+      padding: 80px 0;
+    }
+
+    .blog-detail__back {
+      margin-bottom: 30px;
+    }
+
+    .blog-detail__back a {
+      color: var(--text-secondary);
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .blog-detail__header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .blog-detail__category {
+      display: inline-block;
+      background: var(--gradient-btn);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+    }
+
+    .blog-detail__title {
+      font-size: 42px;
+      font-weight: 800;
+      font-family: var(--font-head);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .blog-detail__meta {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .blog-detail__image {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .blog-detail__image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .blog-detail__content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .blog-detail__content h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 40px 0 20px;
+      color: var(--accent);
+    }
+
+    .blog-detail__content h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 30px 0 15px;
+    }
+
+    .blog-detail__content p {
+      margin-bottom: 20px;
+    }
+
+    .blog-detail__content ul,
+    .blog-detail__content ol {
+      margin-bottom: 20px;
+      padding-left: 30px;
+    }
+
+    .blog-detail__content li {
+      margin-bottom: 10px;
+    }
+
+    /* ── FOOTER ───────────────────────────── */
+    .footer {
+      background: var(--darker);
+      border-top: 1px solid var(--border-color);
+      padding: 60px 0 30px;
+    }
+
+    .footer__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer__brand {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .footer__logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .footer__logo-icon {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer__logo-name span:first-child {
+      color: var(--accent);
+    }
+
+    .footer__tagline {
+      color: var(--text-secondary);
+      font-size: 14px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .footer__social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .footer__social-btn {
+      width: 40px;
+      height: 40px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 18px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer__social-btn:hover {
+      background: var(--gradient-btn);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .footer__bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────── */
+    @media (max-width: 768px) {
+      .header__nav {
+        display: none;
+      }
+
+      .hero__title {
+        font-size: 36px;
+      }
+
+      .blog-posts {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-detail__title {
+        font-size: 32px;
+      }
+
+      .blog-detail__content {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <!-- Logo -->
+        <a href="index.html" class="header__logo">
+          <div class="header__logo-icon">
+            <img src="brazil.svg" width="48" height="32" alt="Brazil Flag" />
+          </div>
+          <div class="header__logo-text">
+            <span>IPTV</span>Brazil
+          </div>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+          <ul class="header__links">
+            <li><a href="index.html#recursos">Features</a></li>
+            <li><a href="index.html#canais">Channels</a></li>
+            <li><a href="index.html#planos">Plans</a></li>
+            <li><a href="index.html#dispositivos">Devices</a></li>
+            <li><a href="index.html#perguntas">FAQ</a></li>
+            <li><a href="blogs.html" class="active">Blogs</a></li>
+          </ul>
+          <div class="header__cta">
+            <a href="https://wa.me/923067849649?text=Hello!%20I%20want%20to%20know%20more%20about%20IPTV%20Brazil" target="_blank" class="btn btn--outline">📲 WhatsApp</a>
+            <a href="https://wa.me/923067849649?text=Hello!%20I%20want%20a%20free%20trial%20of%20IPTV%20Brazil" target="_blank" class="btn btn--primary">Free Trial</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero__title">IPTV Brazil Blogs</h1>
+      <p class="hero__subtitle">Stay updated with the latest IPTV news, tips, guides, and entertainment insights</p>
+    </div>
+  </section>
+
+  <!-- ========== BLOG GRID ========== -->
+  <section class="blog-grid">
+    <div class="container">
+      <h2 class="blog-grid__title">Latest Articles</h2>
+      <p class="blog-grid__subtitle">Discover everything you need to know about IPTV streaming</p>
+
+      <div class="blog-posts">
+        <article class="blog-post" id="setup-guide">
+          <div class="blog-post__image">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="IPTV Setup Guide" />
+            <div class="blog-post__category">Guide</div>
+          </div>
+          <div class="blog-post__content">
+            <h3 class="blog-post__title">Complete IPTV Setup Guide for Beginners</h3>
+            <p class="blog-post__excerpt">Learn how to set up IPTV on all your devices in under 10 minutes. Step-by-step instructions for Android, iOS, Smart TV, and more.</p>
+            <div class="blog-post__meta">
+              <span>Dec 15, 2024</span>
+              <span>5 min read</span>
+            </div>
+            <a href="#setup-guide-detail" class="blog-post__link">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-post" id="sports-channels">
+          <div class="blog-post__image">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=250&fit=crop" alt="Sports Channels" />
+            <div class="blog-post__category">Sports</div>
+          </div>
+          <div class="blog-post__content">
+            <h3 class="blog-post__title">Top 10 Must-Watch Sports Channels in 2025</h3>
+            <p class="blog-post__excerpt">From Premier League to NBA, discover the best sports channels available on IPTV Brazil. Never miss your favorite games again.</p>
+            <div class="blog-post__meta">
+              <span>Dec 10, 2024</span>
+              <span>4 min read</span>
+            </div>
+            <a href="#sports-channels-detail" class="blog-post__link">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-post" id="4k-streaming">
+          <div class="blog-post__image">
+            <img src="https://images.unsplash.com/photo-1489599735734-79b4d4c4b5db?w=400&h=250&fit=crop" alt="4K Streaming" />
+            <div class="blog-post__category">Technology</div>
+          </div>
+          <div class="blog-post__content">
+            <h3 class="blog-post__title">Why 4K Streaming is the Future of Entertainment</h3>
+            <p class="blog-post__excerpt">Explore the benefits of 4K streaming and how IPTV Brazil delivers crystal-clear picture quality for movies, series, and live TV.</p>
+            <div class="blog-post__meta">
+              <span>Dec 5, 2024</span>
+              <span>6 min read</span>
+            </div>
+            <a href="#4k-streaming-detail" class="blog-post__link">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-post__image">
+            <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=250&fit=crop" alt="IPTV Security" />
+            <div class="blog-post__category">Security</div>
+          </div>
+          <div class="blog-post__content">
+            <h3 class="blog-post__title">Is IPTV Safe? Security Tips for Streaming</h3>
+            <p class="blog-post__excerpt">Learn about IPTV security, VPN usage, and how to protect your privacy while streaming. Stay safe online with these essential tips.</p>
+            <div class="blog-post__meta">
+              <span>Nov 28, 2024</span>
+              <span>7 min read</span>
+            </div>
+            <a href="#security-tips" class="blog-post__link">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-post__image">
+            <img src="https://images.unsplash.com/photo-1489599735734-79b4d4c4b5db?w=400&h=250&fit=crop" alt="Device Compatibility" />
+            <div class="blog-post__category">Devices</div>
+          </div>
+          <div class="blog-post__content">
+            <h3 class="blog-post__title">IPTV Compatible Devices: What Works Best</h3>
+            <p class="blog-post__excerpt">Complete guide to IPTV-compatible devices. From smartphones to smart TVs, find out which devices work best for streaming.</p>
+            <div class="blog-post__meta">
+              <span>Nov 20, 2024</span>
+              <span>5 min read</span>
+            </div>
+            <a href="#device-guide" class="blog-post__link">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-post__image">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="IPTV vs Cable" />
+            <div class="blog-post__category">Comparison</div>
+          </div>
+          <div class="blog-post__content">
+            <h3 class="blog-post__title">IPTV vs Traditional Cable TV: Pros and Cons</h3>
+            <p class="blog-post__excerpt">Compare IPTV with traditional cable TV. Discover the advantages of modern streaming technology over outdated cable services.</p>
+            <div class="blog-post__meta">
+              <span>Nov 15, 2024</span>
+              <span>6 min read</span>
+            </div>
+            <a href="#iptv-vs-cable" class="blog-post__link">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOG DETAIL ========== -->
+  <section class="blog-detail" id="setup-guide-detail" style="display: none;">
+    <div class="container">
+      <div class="blog-detail__back">
+        <a href="#" onclick="showBlogList()">← Back to Articles</a>
+      </div>
+
+      <header class="blog-detail__header">
+        <span class="blog-detail__category">Guide</span>
+        <h1 class="blog-detail__title">Complete IPTV Setup Guide for Beginners</h1>
+        <div class="blog-detail__meta">
+          <span>December 15, 2024</span>
+          <span>5 min read</span>
+        </div>
+      </header>
+
+      <div class="blog-detail__image">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop" alt="IPTV Setup Guide" />
+      </div>
+
+      <div class="blog-detail__content">
+        <p>Welcome to your complete IPTV setup guide! Whether you're new to streaming or switching from traditional cable, this step-by-step guide will help you get IPTV Brazil up and running on all your devices in under 10 minutes.</p>
+
+        <h2>What You'll Need</h2>
+        <ul>
+          <li>A stable internet connection (minimum 10 Mbps)</li>
+          <li>Your IPTV Brazil login credentials</li>
+          <li>A compatible device (Android, iOS, Smart TV, etc.)</li>
+          <li>The IPTV app (we'll help you find it)</li>
+        </ul>
+
+        <h2>Step 1: Download the IPTV App</h2>
+        <p>The first step is to download the IPTV app on your device. We recommend different apps for different platforms:</p>
+
+        <h3>For Android Devices:</h3>
+        <ul>
+          <li>IPTV Smarters Pro</li>
+          <li>TiviMate</li>
+          <li>GSE Smart IPTV</li>
+        </ul>
+
+        <h3>For iOS Devices:</h3>
+        <ul>
+          <li>IPTV Smarters Pro</li>
+          <li>GSE Smart IPTV</li>
+        </ul>
+
+        <h2>Step 2: Configure Your Account</h2>
+        <p>Once you've installed the app, open it and look for the login or configuration section. You'll need to enter:</p>
+        <ul>
+          <li>Username</li>
+          <li>Password</li>
+          <li>Server URL (provided by IPTV Brazil)</li>
+        </ul>
+
+        <h2>Step 3: Start Streaming</h2>
+        <p>After successful login, you'll see all available channels, movies, and series. Browse by category or use the search function to find your favorite content.</p>
+
+        <p>That's it! You're now ready to enjoy unlimited streaming with IPTV Brazil. If you encounter any issues, our 24/7 support team is always ready to help.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-icon">
+              <img src="brazil.svg" width="38" height="25" alt="Brazil Flag" />
+            </div>
+            <span class="footer__logo-name"><span>IPTV</span>Brazil</span>
+          </div>
+          <p class="footer__tagline">
+            The best IPTV service in Brazil. 30,000+ channels, 60,000+ movies and series in HD & 4K. Instant activation, 24/7 support.
+          </p>
+          <div class="footer__social">
+            <a href="https://wa.me/923067849649" target="_blank" class="footer__social-btn" aria-label="WhatsApp">💬</a>
+            <div class="footer__social-btn" aria-label="Telegram">✈️</div>
+            <div class="footer__social-btn" aria-label="Instagram">📷</div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>&copy; 2024 IPTV Brazil. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple blog detail toggle (can be enhanced with proper routing)
+    function showBlogList() {
+      document.querySelector('.blog-grid').style.display = 'block';
+      document.querySelector('.blog-detail').style.display = 'none';
+    }
+
+    // Add click handlers for blog links
+    document.querySelectorAll('.blog-post__link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1) + '-detail';
+        const detailSection = document.getElementById(targetId);
+        if (detailSection) {
+          document.querySelector('.blog-grid').style.display = 'none';
+          detailSection.style.display = 'block';
+          detailSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
